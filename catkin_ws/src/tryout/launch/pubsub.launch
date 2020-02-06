@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+<node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+<!--<node name="map_node" pkg="map_server" type="map_server" args="$(find tryout)/src/map.yaml" respawn="false">
+    <param name="frame_id" value="/map" />
+</node>-->
+<remap from="cmd_vel" to="turtle1/cmd_vel"/>
+
+</launch>
